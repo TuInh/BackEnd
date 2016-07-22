@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<fieldset name="team" addrulepath="components/com_team/models/rules" label="COM_TEAM_FORM_LABEL">
+		<field name="team_name"
+			type="text"
+			id="team-name"
+			size="30"
+			description="COM_TEAM_TEAM_EMAIL_NAME_DESC"
+			label="COM_TEAM_TEAM_EMAIL_NAME_LABEL"
+			filter="string"
+			required="true"
+		/>
+		<field name="team_email"
+			type="email"
+			id="team-email"
+			size="30"
+			description="COM_TEAM_EMAIL_DESC"
+			label="COM_TEAM_EMAIL_LABEL"
+			filter="string"
+			validate="teamemail"
+			required="true"
+		/>
+		<field name="team_subject"
+			type="text"
+			id="team-emailmsg"
+			size="60"
+			description="COM_TEAM_TEAM_MESSAGE_SUBJECT_DESC"
+			label="COM_TEAM_TEAM_MESSAGE_SUBJECT_LABEL"
+			filter="string"
+			validate="teamemailsubject"
+			required="true"
+		/>
+		<field name="team_message"
+			type="textarea"
+			cols="50"
+			rows="10"
+			id="team-message"
+			description="COM_TEAM_TEAM_ENTER_MESSAGE_DESC"
+			label="COM_TEAM_TEAM_ENTER_MESSAGE_LABEL"
+			filter="safehtml"
+			validate="teamemailmessage"
+			required="true"
+		/>
+		<field name="team_email_copy"
+			type="checkbox"
+			id="team-email-copy"
+			description="COM_TEAM_TEAM_EMAIL_A_COPY_DESC"
+			label="COM_TEAM_TEAM_EMAIL_A_COPY_LABEL"
+			default="0"
+		/>
+
+	</fieldset>
+	<fieldset name="captcha">
+		<field
+			name="captcha"
+			type="captcha"
+			label="COM_TEAM_CAPTCHA_LABEL"
+			description="COM_TEAM_CAPTCHA_DESC"
+			validate="captcha"
+			namespace="team"
+		/>
+	</fieldset>
+</form>

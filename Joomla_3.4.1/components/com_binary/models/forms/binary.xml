@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<fieldset name="binary" addrulepath="components/com_binary/models/rules" label="COM_BINARY_FORM_LABEL">
+		<field name="binary_name"
+			type="text"
+			id="binary-name"
+			size="30"
+			description="COM_BINARY_BINARY_EMAIL_NAME_DESC"
+			label="COM_BINARY_BINARY_EMAIL_NAME_LABEL"
+			filter="string"
+			required="true"
+		/>
+		<field name="binary_email"
+			type="email"
+			id="binary-email"
+			size="30"
+			description="COM_BINARY_EMAIL_DESC"
+			label="COM_BINARY_EMAIL_LABEL"
+			filter="string"
+			validate="binaryemail"
+			required="true"
+		/>
+		<field name="binary_subject"
+			type="text"
+			id="binary-emailmsg"
+			size="60"
+			description="COM_BINARY_BINARY_MESSAGE_SUBJECT_DESC"
+			label="COM_BINARY_BINARY_MESSAGE_SUBJECT_LABEL"
+			filter="string"
+			validate="binaryemailsubject"
+			required="true"
+		/>
+		<field name="binary_message"
+			type="textarea"
+			cols="50"
+			rows="10"
+			id="binary-message"
+			description="COM_BINARY_BINARY_ENTER_MESSAGE_DESC"
+			label="COM_BINARY_BINARY_ENTER_MESSAGE_LABEL"
+			filter="safehtml"
+			validate="binaryemailmessage"
+			required="true"
+		/>
+		<field name="binary_email_copy"
+			type="checkbox"
+			id="binary-email-copy"
+			description="COM_BINARY_BINARY_EMAIL_A_COPY_DESC"
+			label="COM_BINARY_BINARY_EMAIL_A_COPY_LABEL"
+			default="0"
+		/>
+
+	</fieldset>
+	<fieldset name="captcha">
+		<field
+			name="captcha"
+			type="captcha"
+			label="COM_BINARY_CAPTCHA_LABEL"
+			description="COM_BINARY_CAPTCHA_DESC"
+			validate="captcha"
+			namespace="binary"
+		/>
+	</fieldset>
+</form>

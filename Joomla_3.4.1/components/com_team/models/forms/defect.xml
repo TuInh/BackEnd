@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<fieldset name="defect" addrulepath="components/com_defect/models/rules" label="COM_DEFECT_FORM_LABEL">
+		<field name="defect_name"
+			type="text"
+			id="defect-name"
+			size="30"
+			description="COM_DEFECT_DEFECT_EMAIL_NAME_DESC"
+			label="COM_DEFECT_DEFECT_EMAIL_NAME_LABEL"
+			filter="string"
+			required="true"
+		/>
+		<field name="defect_email"
+			type="email"
+			id="defect-email"
+			size="30"
+			description="COM_DEFECT_EMAIL_DESC"
+			label="COM_DEFECT_EMAIL_LABEL"
+			filter="string"
+			validate="defectemail"
+			required="true"
+		/>
+		<field name="defect_subject"
+			type="text"
+			id="defect-emailmsg"
+			size="60"
+			description="COM_DEFECT_DEFECT_MESSAGE_SUBJECT_DESC"
+			label="COM_DEFECT_DEFECT_MESSAGE_SUBJECT_LABEL"
+			filter="string"
+			validate="defectemailsubject"
+			required="true"
+		/>
+		<field name="defect_message"
+			type="textarea"
+			cols="50"
+			rows="10"
+			id="defect-message"
+			description="COM_DEFECT_DEFECT_ENTER_MESSAGE_DESC"
+			label="COM_DEFECT_DEFECT_ENTER_MESSAGE_LABEL"
+			filter="safehtml"
+			validate="defectemailmessage"
+			required="true"
+		/>
+		<field name="defect_email_copy"
+			type="checkbox"
+			id="defect-email-copy"
+			description="COM_DEFECT_DEFECT_EMAIL_A_COPY_DESC"
+			label="COM_DEFECT_DEFECT_EMAIL_A_COPY_LABEL"
+			default="0"
+		/>
+
+	</fieldset>
+	<fieldset name="captcha">
+		<field
+			name="captcha"
+			type="captcha"
+			label="COM_DEFECT_CAPTCHA_LABEL"
+			description="COM_DEFECT_CAPTCHA_DESC"
+			validate="captcha"
+			namespace="defect"
+		/>
+	</fieldset>
+</form>

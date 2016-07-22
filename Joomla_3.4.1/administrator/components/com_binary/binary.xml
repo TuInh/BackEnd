@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5.0" method="upgrade">
+	<name>COM_BINARY</name>
+	<creationDate>2015-04-20</creationDate>
+	<author>le.vananh</author>
+	<authorEmail>le.vananh@samsung.com</authorEmail>
+	<authorUrl>http://samsung.com</authorUrl>
+	<copyright>Copyright Info</copyright>
+	<license>License Info</license>
+	<version>1.0.0</version>
+	<description>COM_BINARY_DESCRIPTION</description>
+
+	<install>
+  		<sql>
+			<file charset="utf8" driver="mysql">sql/install.mysql.utf8.sql</file>
+  		</sql>
+	</install>
+	
+	<uninstall> 
+		<sql>
+			<file charset="utf8" driver="mysql">sql/uninstall.mysql.utf8.sql</file>
+  		</sql>
+	</uninstall>
+	<files folder="site">
+		<folder>controllers</folder>
+		<folder>helpers</folder>
+		<folder>languages</folder>
+		<folder>models</folder>
+		<folder>views</folder>
+		<filename>index.html</filename>
+		<filename>binary.php</filename>
+		<filename>router.php</filename>
+		<filename>controller.php</filename>
+		<filename>metadata.xml</filename>
+	</files> 
+
+	<scriptfile>install.php</scriptfile>
+
+	<languages folder="site">
+		<language tag="en-GB">languages/en-GB/en-GB.com_binary.ini</language>
+	</languages>
+
+	<administration>
+		<menu link="option=com_binary" img="components/com_binary/assets/images/binary_icon.png">COM_BINARY</menu>
+
+		<files folder="admin">
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>languages</folder>
+			<folder>models</folder>
+			<folder>views</folder>
+			<folder>tables</folder>
+			<folder>sql</folder>
+			<filename>access.xml</filename>
+			<filename>binary.php</filename>
+			<filename>binary.xml</filename>
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+		</files>  
+
+		<languages folder="admin">
+			<language tag="en-GB">languages/en-GB/en-GB.com_binary.ini</language>
+			<language tag="en-GB">languages/en-GB/en-GB.com_binary.sys.ini</language>
+		</languages>
+
+	</administration>
+	
+</extension>
